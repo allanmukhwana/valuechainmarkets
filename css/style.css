@@ -1,0 +1,309 @@
+/**
+ * CSS Styles for Value Chain Markets
+
+ Insert Poppins font
+ */
+
+ @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+ body {
+
+    font-family: 'Chelsea Market', system-ui !important;
+
+}
+
+#visualization {
+    width: 100%;
+    height: 600px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.node {
+    cursor: pointer;
+}
+
+.node circle {
+    fill: #fff;
+    stroke: #1f77b4;
+    stroke-width: 2px;
+}
+
+.node text {
+    font: 12px sans-serif;
+}
+
+.link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 2px;
+}
+
+#treemap {
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+.treemap-cell {
+    position: absolute;
+    overflow: hidden;
+    padding: 5px;
+    border: 1px solid #fff;
+    font-size: 12px;
+    line-height: 1.2;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.treemap-cell:hover {
+    opacity: 0.9;
+}
+
+.treemap-cell.opportunities {
+    background-color: #009688;
+}
+
+.treemap-cell.pain-points {
+    background-color: #cd390a;
+}
+
+.treemap-cell.optimization {
+    background-color: #673AB7;
+}
+.legend {
+    font-size: 14px;
+}
+
+.legend-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.legend-dot.opportunities {
+    background-color: #009688;
+}
+
+.legend-dot.pain-points {
+    background-color: #cd390a;
+}
+
+.legend-dot.optimization {
+    background-color: #673AB7;
+}
+
+/* Navigation Styles */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: rgba(255,255,255,0.9);
+}
+
+/* Card Styles */
+.card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    border: none;
+    margin-bottom: 1.5rem;
+}
+
+.card-title {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+/* Feature Items */
+.feature-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-item i {
+    margin-bottom: 1rem;
+}
+
+.feature-item h5 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+/* Accordion Styles */
+.accordion-button:not(.collapsed) {
+    background-color: #e7f1ff;
+    color: #0d6efd;
+    font-weight: 500;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(13, 110, 253, 0.25);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #e7f1ff;
+    color: #0d6efd;
+}
+
+/* Tab Styles */
+.nav-tabs .nav-link {
+    color: #6c757d;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.nav-tabs .nav-link:hover {
+    border: none;
+    color: #0d6efd;
+}
+
+.nav-tabs .nav-link.active {
+    color: #0d6efd;
+    border: none;
+    border-bottom: 2px solid #0d6efd;
+    background: none;
+}
+
+/* List Styles */
+.list-group-item {
+    border-left: none;
+    border-right: none;
+    padding: 1rem;
+}
+
+.list-group-numbered > .list-group-item::before {
+    color: #0d6efd;
+    font-weight: 600;
+}
+
+/* Section Spacing */
+section {
+    scroll-margin-top: 80px;
+}
+
+/* Icons */
+.bi {
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #treemap {
+        height: 400px;
+    }
+    
+    .feature-item {
+        margin-bottom: 2rem;
+    }
+}
+
+#analysisResults {
+    max-height: 600px;
+    overflow-y: auto;
+}
+.treemap-cell {
+    font-family: Nunito Sans;
+    font-weight: 700;
+}
+
+/* Process Diagram Styles */
+.process-diagram {
+    padding: 2rem 0;
+    overflow-x: auto;
+}
+
+.stage-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 900px;
+    position: relative;
+    padding: 0 2rem;
+}
+
+.stage-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #e9ecef;
+    z-index: 1;
+}
+
+.stage {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    position: relative;
+    z-index: 2;
+    width: 180px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stage:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.stage i {
+    font-size: 2rem;
+    color: #0d6efd;
+    margin-bottom: 1rem;
+}
+
+.stage h5 {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.stage p {
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-bottom: 0;
+}
+
+.stage[data-stage="raw-materials"] i { color: #2ecc71; }
+.stage[data-stage="supplier"] i { color: #3498db; }
+.stage[data-stage="manufacturer"] i { color: #e74c3c; }
+.stage[data-stage="distributor"] i { color: #f39c12; }
+.stage[data-stage="retailer"] i { color: #9b59b6; }
+.stage[data-stage="customer"] i { color: #1abc9c; }
+
+/* Loader Styles */
+#loader {
+    padding: 2rem;
+}
+
+#loader img {
+    border-radius: 8px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+#loader p {
+    color: #6c757d;
+    font-weight: 500;
+}

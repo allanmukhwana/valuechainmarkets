@@ -1,0 +1,48 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Composer dependencies
+/vendor/
+
+# IDE specific files
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+/logs/
+
+# Cache files
+*.cache
+
+# Database backups
+*.sql
+*.sqlite
+*.db
+
+# Except schema.sql
+!database/schema.sql
+
+# Node modules (if using any)
+node_modules/
+
+# Build files
+/dist/
+/build/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
